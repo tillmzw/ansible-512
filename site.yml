@@ -1,0 +1,24 @@
+---
+- name: configure SSH access
+  hosts: all
+  remote_user: root
+  roles:
+    - ssh_access
+
+- name: configure users
+  hosts: all
+  remote_user: root
+  roles:
+    - users
+
+- name: install updates
+  hosts: debian
+  remote_user: root
+  roles:
+    - pkg_update
+
+- name: sshguard
+  hosts: dmz
+  remote_user: root
+  roles:
+    - sshguard

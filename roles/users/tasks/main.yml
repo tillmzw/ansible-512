@@ -1,0 +1,19 @@
+---
+- name: install sudo package
+  apt:
+    name: sudo
+    state: present
+
+- name: create user till
+  user:
+    name: till
+    shell: /bin/bash
+    groups: sudo
+
+- name: register ssh keys for till
+  authorized_key:
+    user: till
+    state: present
+    key: '{{ item }}'
+  with_file:
+    - public_keys/till

@@ -1,0 +1,16 @@
+---
+- name: Register ansible SSH key
+  authorized_key:
+    user: root
+    state: present
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub')}}"
+
+- name: Prevent password login for root
+  lineinfile:
+    dest=/etc/ssh/sshd_config
+    regexp='^PermitRootLogin'
+    line='PermitRootLogin prohibit-password' 
+    state=present
+    backup=yes
+  notify:
+    - restart ssh
