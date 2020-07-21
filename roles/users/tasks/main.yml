@@ -7,6 +7,7 @@
 - name: create user till
   user:
     name: till
+    password: '$6$0JpKVy8ECZe/djQ5$4qAUBmwVlthrktDohm1ORsZ085TjOEB1mWjTMVhnpfMq2Kj1DE41bYLrG9NqBy4LJMi9IVIbMmtCyZTL1zGPq1'
     shell: /bin/bash
     groups: sudo
 
