@@ -1,30 +1,23 @@
+name		ansible_host=10.0.1.2
 proxy 		ansible_host=10.0.1.10
 selfoss 	ansible_host=10.0.1.11
 browse 		ansible_host=10.0.1.12
-#wg		ansible_host=10.0.1.13
 csgo_ds 	ansible_host=10.0.1.14
 hackmd		ansible_host=10.0.1.16
 gitea		ansible_host=10.0.1.17
 ansible  	ansible_host=10.0.1.19
-syncthing	ansible_host=10.0.1.20
 wallabag	ansible_host=10.0.1.21
-kanban		ansible_host=10.0.1.23
-mon			ansible_host=10.0.1.24
-time		ansible_host=10.0.1.25
 
 [debian]
+name
 proxy 
 selfoss
 browse
 csgo_ds
 hackmd
 ansible
-syncthing
 gitea
 wallabag
-kanban
-mon
-time
 
 [dmz]
 gitea
