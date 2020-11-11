@@ -1,13 +1,3 @@
-name		ansible_host=10.0.1.2
-proxy 		ansible_host=10.0.1.10
-selfoss 	ansible_host=10.0.1.11
-browse 		ansible_host=10.0.1.12
-csgo_ds 	ansible_host=10.0.1.14
-hackmd		ansible_host=10.0.1.16
-gitea		ansible_host=10.0.1.17
-ansible  	ansible_host=10.0.1.19
-wallabag	ansible_host=10.0.1.21
-
 [debian]
 name
 proxy 
