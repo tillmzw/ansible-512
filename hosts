@@ -1,14 +1,14 @@
 [debian]
 name
 proxy 
-selfoss
+miniflux
 browse
 csgo-ds
-hackmd
 ansible
 gitea
 wallabag
 minecraft
+privatebin
 
 [dmz]
 gitea
