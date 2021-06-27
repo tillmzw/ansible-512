@@ -1,0 +1,10 @@
+[Unit]
+Description=Start ansible playbook.
+After=network.target
+
+[Service]
+Type=simple
+User=ansible
+Group=ansible
+WorkingDirectory=/home/ansible/512
+ExecStart=/usr/bin/ansible-playbook -i hosts site.yml 

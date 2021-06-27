@@ -1,0 +1,10 @@
+[Unit]
+Description=Start ansible regularly.
+Requires=ansible-512.service
+
+[Timer]
+Unit=ansible-512.service
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
