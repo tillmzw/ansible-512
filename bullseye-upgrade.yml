@@ -1,0 +1,5 @@
+- name: bullseye upgrade
+  hosts: debian 
+  remote_user: root
+  roles:
+    - bullseye_apt 

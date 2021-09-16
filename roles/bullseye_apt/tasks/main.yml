@@ -1,0 +1,10 @@
+---
+- name: Copy new apt sources.list
+  copy:
+    src: sources.list
+    dest: /etc/apt/sources.list
+    owner: root
+    group: root
+    mode: u+r,g+r,o+r
+  notify: Apply upgrade
+
