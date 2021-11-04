@@ -1,0 +1,35 @@
+- name: Deploy node_exporter
+  hosts: all
+  roles:
+  - cloudalchemy.node_exporter
+  tags:
+  - node_exporter
+
+- name: Setup core monitoring software
+  hosts: prometheus
+  roles:
+  - cloudalchemy.blackbox-exporter
+  - cloudalchemy.prometheus
+  - cloudalchemy.alertmanager
+  tags:
+  - prometheus
+
+- name: Deploy grafana
+  hosts: grafana
+  roles:
+  - cloudalchemy.grafana
+  tags:
+  - grafana
+
+- name: Add node textfile examples
+  hosts: all
+  tasks:
+  - name: Node CPU threshold
+    template:
+      src: node_metrics.prom.j2
+      dest: "{{ node_exporter_textfile_dir }}/node_metrics.prom"
+      owner: root
+      group: root
+      mode: 0644
+  tags:
+  - node_exporter
